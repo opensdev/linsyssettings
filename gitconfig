@@ -1,0 +1,25 @@
+[color]
+    ui = auto
+[color "branch"]
+    current = blue bold
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[color "diff"]
+    whitespace = red reverse
+[apply]
+    whitespace = warn
+[merge]
+    tool = vimdiff
+[user]
+    name = yourname
+    email = youremail@domain.com
+
