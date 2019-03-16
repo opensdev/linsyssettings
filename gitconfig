@@ -9,17 +9,59 @@
     frag = magenta bold
     old = red bold
     new = green bold
+    whitespace = red reverse
 [color "status"]
     added = yellow
     changed = green
     untracked = cyan
-[color "diff"]
-    whitespace = red reverse
+[core]
+	editor = vim
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	fileMode = false
+	gitproxy = /home/<user>/git-proxy.sh
+	sharedRepository = all
 [apply]
-    whitespace = warn
+	whitespace = warn
 [merge]
-    tool = vimdiff
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[sequence]
+	editor = interactive-rebase-tool
+[http]
+	postbuffer = 1048576000
+	sslVerify = fasle
+	proxy = <proxy>
+[http]
+	postbuffer = 1048576000
+	sslVerify = fasle
+	proxy = <proxy>
+[pw]
+	server = https://patchwork.ozlabs.org/api/2.0
+	project = <project>
+	token = <token>
+	username = <user>
+	password = <passwd>
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = <email>
+	smtppass = <passwd>
+	smtpserverport = 587
 [user]
-    name = yourname
-    email = youremail@domain.com
-
+	name = <username>
+	email = <username>@<domain>.com
+[alias]
+	pu = pull
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	dc = diff --cached
+	gl = log --pretty=format:'%h - %an, %ar : %s'
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	ign = ls-files -o -i --exclude-standard         # Show files ignored by git
+	tagd = log --tags --simplify-by-decoration --pretty=format:'%ai, %d'
