@@ -15,7 +15,7 @@ function ta(){
 	rm -rf cscope.out
 	#generate new info
 	find $PWD | egrep -i "\.(c|h|cpp)$" > cscope.files
-	catgs -R . *.c *.h *.cpp --tag-relative=yes ./
+	ctags -R . *.c *.h *.cpp --tag-relative=yes ./
 }
 
 PS1='\[\e[33;1m\]\u@\h: \[\e[31m\]\W\[\e[0m\]\$ '

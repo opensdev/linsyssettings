@@ -30,5 +30,5 @@ Screen capture:
 
 ####Others: 
 
-    map <C-F12> :!/usr/local/bin/ctags -R --exclude=.git --exclude=log --exclude=wutils --c++-kinds=+p --fields=+iaS --extra=+q *<CR>
+    map <C-F12> :!/usr/bin/ctags -R --exclude=.git --exclude=log --exclude=wutils --c++-kinds=+p --fields=+iaS --extra=+q *<CR>
     map f <Plug>(easymotion-prefix)
